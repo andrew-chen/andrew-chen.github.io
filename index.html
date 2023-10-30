@@ -9,6 +9,8 @@
         <script lang="javascript">
             $(window).load(function() {
                 // here is where we will do some setup stuff, after the rest of the page and stuff has loaded
+                $("#toggleExample").click(function(){$("#exampleText").toggle();})
+            
             });
         </script>
     </head>
@@ -53,7 +55,7 @@
                 <li>
                     I suppose on a certain level I maybe ought to decide earlier on the extent to which I want this to be more personal or more professional.
                 </li>
-                <li>
+                <li id="exampleText">
                     Example text that might be shown or hidden
                 </li>
                 <li>
