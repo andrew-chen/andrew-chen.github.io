@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Unstructured Play Sandbox</title>
+<style>
+    body { 
+        margin: 0; 
+        overflow: hidden; 
+        background-color: #121212; 
+        color: #ffffff; 
+        font-family: sans-serif;
+        touch-action: none; /* Prevents default touch actions like panning */
+    }
+    #canvas-container { 
+        position: relative; 
+        width: 100vw; 
+        height: 100vh; 
+    }
+    canvas { 
+        display: block; 
+    }
+    #overlay { 
+        position: absolute; 
+        top: 20px; 
+        left: 20px; 
+        pointer-events: none; 
+    }
+    h1 { 
+        font-size: 1.2rem; 
+        font-weight: normal; 
+        margin: 0; 
+        opacity: 0.7; 
+        letter-spacing: 1px; 
+    }
+</style>
+</head>
+<body>
+
+<div id="canvas-container">
+    <div id="overlay">
+        <h1>Interact. Discover. Observe.</h1>
+    </div>
+    <canvas id="playCanvas"></canvas>
+</div>
+
+<script>
+    const canvas = document.getElementById('playCanvas');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    class Particle {
+        constructor(x, y) {
+            this.x = x;
+            this.y = y;
+            this.size = Math.random() * 6 + 2;
+            this.speedX = Math.random() * 4 - 2;
+            this.speedY = Math.random() * 4 - 2;
+            this.color = `hsl(${Math.random() * 360}, 75%, 65%)`;
+        }
+        update() {
+            this.x += this.speedX;
+            this.y += this.speedY;
+            if (this.size > 0.2) this.size -= 0.02;
+        }
+        draw() {
+            ctx.fillStyle = this.color;
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fill();
+        }
+    }
+
+    function handleParticles() {
+        for (let i = 0; i < particles.length; i++) {
+            particles[i].update();
+            particles[i].draw();
+
+            for (let j = i; j < particles.length; j++) {
+                const dx = particles[i].x - particles[j].x;
+                const dy = particles[i].y - particles[j].y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                
+                if (distance < 90) {
+                    ctx.beginPath();
+                    ctx.strokeStyle = particles[i].color;
+                    ctx.lineWidth = 0.2;
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    ctx.stroke();
+                    ctx.closePath();
+                }
+            }
+            if (particles[i].size <= 0.2) {
+                particles.splice(i, 1);
+                i--;
+            }
+        }
+    }
+
+    function addInteraction(x, y) {
+        for(let i = 0; i < 6; i++){
+            particles.push(new Particle(x, y));
+        }
+    }
+
+    // Mouse Events
+    window.addEventListener('mousemove', (e) => addInteraction(e.clientX, e.clientY));
+    window.addEventListener('click', (e) => addInteraction(e.clientX, e.clientY));
+
+    // Touch Events
+    function handleTouch(e) {
+        e.preventDefault(); 
+        for (let i = 0; i < e.touches.length; i++) {
+            addInteraction(e.touches[i].clientX, e.touches[i].clientY);
+        }
+    }
+
+    window.addEventListener('touchmove', handleTouch, { passive: false });
+    window.addEventListener('touchstart', handleTouch, { passive: false });
+
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        handleParticles();
+        requestAnimationFrame(animate);
+    }
+    animate();
+</script>
+</body>
+</html>
