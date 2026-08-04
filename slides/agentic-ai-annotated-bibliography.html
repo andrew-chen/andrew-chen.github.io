@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>agentic-ai-annotated-bibliography</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<h1 id="what-the-heck-is-agentic-a-historical-reading-guide">What the
+Heck is “Agentic”? A Historical Reading Guide</h1>
+<p><strong>A history of the pursuit of autonomous machine intelligence,
+from alchemy to LLM agents</strong></p>
+<p>This is a companion reference document, not a transcript or summary
+of any single talk. It stands on its own: no prior session, slide deck,
+or course is assumed. It traces one recurring pattern across roughly 250
+years of intellectual history — a confident claim about achieving
+genuine machine autonomy, followed by real and lasting tools that claim
+actually produced, followed by a quiet retreat from the original
+claim.</p>
+<p>Each section below covers one era. Every section opens with a short
+paragraph describing that era — its beginning, its middle, its end, and
+what it left behind. Below that are links, organized in two tiers:</p>
+<ul>
+<li><strong>Start here</strong> — general-audience sources (mostly
+Wikipedia), good for a first orientation.</li>
+<li><strong>Go deeper</strong> — primary sources: the original papers,
+archives, and technical material, for readers who want to go
+further.</li>
+</ul>
+<p>This document is licensed under <a
+href="https://creativecommons.org/licenses/by/4.0/">Creative Commons BY
+4.0</a>. Share it, adapt it, teach with it — just credit the source.</p>
+<hr />
+<h2 id="overview">Overview:</h2>
+<pre><code>Alchemy
+   ↓
+Cybernetics
+   ↓
+GOFAI
+   ↓
+Two Responses
+   ├─ Robotics
+   └─ BDI
+           ↓
+      LLM Agents</code></pre>
+<hr />
+<h2 id="alchemy-and-chymistry-c.-1200s1700">Alchemy and Chymistry
+(c. 1200s–1700)</h2>
+<p>Long before anyone tried to build a thinking machine, a different
+discipline spent centuries pursuing a different impossible
+transformation: turning base metals into gold. For a long time,
+historians treated this as embarrassing pseudoscience that chemistry
+eventually grew out of. That view has changed. Modern historians of
+science now argue that “chymistry” — the older, unified term covering
+both alchemy and what we’d now call chemistry — was a rigorous,
+internally consistent field, pursued with real experimental discipline.
+The goal of transmutation was never dramatically renounced in a single
+moment. It was quietly set aside as the real payoff — the actual
+chemistry that alchemical experimentation produced — took over. Mineral
+acids, distillation, and systematic laboratory method all trace back to
+this pursuit. The “failure” produced the field that succeeded it.</p>
+<p><strong>Start here</strong></p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Alchemy">Alchemy —
+Wikipedia</a> — general overview of the practice, its aims, and its
+historical arc.</li>
+<li><a href="https://www.britannica.com/topic/alchemy">Alchemy —
+Encyclopaedia Britannica</a> — a concise, general-audience account.</li>
+</ul>
+<p><strong>Go deeper</strong></p>
+<ul>
+<li>William R. Newman and Lawrence M. Principe, <em>Alchemy Tried in the
+Fire: Starkey, Boyle, and the Fate of Helmontian Chymistry</em>
+(University of Chicago Press) — <a
+href="https://press.uchicago.edu/ucp/books/book/chicago/A/bo3619371.html">publisher
+page</a>. The definitive scholarly account of how rigorous “chymistry”
+gave rise to modern chemistry; this document’s entire framing rests on
+their historiographical argument.</li>
+</ul>
+<hr />
+<h2 id="cybernetics-19431950s">Cybernetics (1943–1950s)</h2>
+<p>In 1943, a mathematician, a physiologist, and an engineer proposed
+something radical for the time: that purposeful, goal-directed behavior
+could be explained mechanically — through feedback — without appeal to
+anything mystical about “will” or “purpose.” A machine that compares its
+current state to a target and adjusts, they argued, is already behaving
+purposefully. W. Ross Ashby pushed the idea further with his
+“Homeostat,” a device that could adapt to disturbances without any
+internal map of its environment at all — pure trial-and-error
+stability-seeking. The field that grew out of this, cybernetics, didn’t
+scale into the general theory of adaptive intelligence its founders may
+have hoped for. But it didn’t disappear either — it became a component
+technology, quietly present in every thermostat, autopilot, and cruise
+control system built since. The word “cybernetics” itself faded from use
+faster than the idea did.</p>
+<p>The era’s clearest popular echo isn’t a specific machine but a
+rulebook: Isaac Asimov’s Three Laws of Robotics, introduced in 1942, a
+year before Rosenblueth, Wiener, and Bigelow’s founding cybernetics
+paper. The Laws aren’t a technical anticipation of Ashby’s feedback
+concepts — Asimov’s robots follow explicit, ranked rules, which is a
+different idea from rule-free adaptation. But they capture the same
+underlying cultural instinct: a machine’s behavior needs to be governed,
+checked, and corrected. Asimov spent decades of stories showing how
+faithfully-followed rules could still produce strange, unintended
+outcomes — an early fictional version of a pattern this document traces
+across every era that follows.</p>
+<p><strong>Start here</strong></p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Cybernetics">Cybernetics —
+Wikipedia</a> — general overview of the field and its founders.</li>
+<li><a href="https://en.wikipedia.org/wiki/W._Ross_Ashby">W. Ross Ashby
+— Wikipedia</a> — biography, the Homeostat, and the Law of Requisite
+Variety.</li>
+<li><a href="https://en.wikipedia.org/wiki/I,_Robot">I, Robot —
+Wikipedia</a> — Asimov’s 1950 short story collection that introduced and
+explored the Three Laws of Robotics (first stated in his 1942 story
+“Runaround”).</li>
+</ul>
+<p><strong>Go deeper</strong></p>
+<ul>
+<li>Arturo Rosenblueth, Norbert Wiener, and Julian Bigelow, “Behavior,
+Purpose and Teleology,” <em>Philosophy of Science</em> 10(1), 1943,
+pp. 18–24. Free full text: <a
+href="https://courses.media.mit.edu/2004spring/mas966/rosenblueth_1943.pdf">MIT-hosted
+PDF</a>. (Also on <a
+href="https://www.jstor.org/stable/184878">JSTOR</a>, paywalled for most
+readers.) The founding paper of cybernetics.</li>
+<li><a
+href="https://en.wikipedia.org/wiki/An_Introduction_to_Cybernetics">An
+Introduction to Cybernetics — Wikipedia</a> — Ashby’s 1956 book, where
+the Law of Requisite Variety (“only variety can destroy variety”) was
+formally introduced.</li>
+</ul>
+<hr />
+<h2 id="gofai-planning-and-expert-systems-19561980">GOFAI, Planning, and
+Expert Systems (1956–1980)</h2>
+<p>In 1950, Alan Turing had posed a deceptively simple question: if a
+machine’s conversation were indistinguishable from a human’s, what
+grounds would remain for denying it could think? By the mid-1950s, a new
+and more ambitious claim had taken hold, offering a route toward exactly
+that kind of performance: intelligence itself is symbol manipulation.
+Give a machine the right symbols and the right rules for combining them,
+the thinking went, and general intelligent behavior would follow.
+Shakey, a robot built at Stanford Research Institute between 1966 and
+1972, embodied this claim directly — it sensed its environment, built a
+plan using a system called STRIPS, and acted on that plan. A related
+claim, “knowledge is power,” produced expert systems like MYCIN, a
+program that diagnosed bacterial infections about as well as a human
+specialist. Both threads produced real, durable technology — search
+algorithms and rule-based reasoning still sit underneath route planners,
+business rule engines, and countless automated decision systems
+today.</p>
+<p>But the underlying claim ran into a wall philosophers now call the
+Frame Problem: a system reasoning in pure logic has no natural way to
+know what doesn’t change after an action, and specifying it explicitly
+balloons out of control. This turned out to be the theoretical face of a
+much broader pattern. These systems were precise but shallow — they
+handled exactly what had been explicitly specified, and nothing else. In
+practice, that meant brittleness, an absence of common sense, and
+persistent trouble with ordinary ambiguity, nowhere more visibly than in
+natural language, where decades of dedicated effort never obviously
+closed the gap to human-level understanding. The era’s most famous
+public triumphs prove the point rather than disprove it: Deep Blue’s
+1997 chess victory over Garry Kasparov and IBM Watson’s 2011 Jeopardy!
+win were real engineering achievements, confined to narrow,
+tightly-bounded domains, and neither generalized into anything
+resembling common-sense reasoning. In 1973, the UK’s Lighthill Report
+delivered a harsh public verdict on the field’s progress, heralding the
+first “AI winter” — a period of sharply reduced funding and interest
+that would recur again in later decades.</p>
+<p>Philosopher John Searle supplied the era’s most influential
+theoretical objection. His Chinese Room argument (1980) imagined a
+person who doesn’t speak Chinese, alone in a room, manipulating Chinese
+symbols using only a rulebook, producing perfect answers without
+understanding a single word. His claim: that’s what any
+symbol-manipulating computer is doing, no matter how good the rules get.
+It wasn’t an argument that GOFAI had failed to achieve understanding yet
+— it was an argument that no amount of engineering along this path could
+succeed, a categorical objection rather than a practical one.</p>
+<p><strong>Start here</strong></p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Shakey_the_robot">Shakey the
+robot — Wikipedia</a> — overview of the robot, SRI’s project, and its
+legacy.</li>
+<li><a href="https://en.wikipedia.org/wiki/Frame_problem">Frame problem
+— Wikipedia</a> — a clear explanation of the core difficulty.</li>
+<li><a href="https://en.wikipedia.org/wiki/Mycin">Mycin — Wikipedia</a>
+— the expert system’s design, performance, and legacy.</li>
+<li><a href="https://en.wikipedia.org/wiki/AI_winter">AI winter —
+Wikipedia</a> — overview of the funding/interest cycles this era
+triggered.</li>
+<li><a href="https://en.wikipedia.org/wiki/Turing_test">Turing test —
+Wikipedia</a> — overview of the original 1950 proposal and its long
+afterlife as a benchmark (and a point of philosophical dispute) in
+AI.</li>
+<li><a href="https://en.wikipedia.org/wiki/Chinese_room">Chinese room —
+Wikipedia</a></li>
+<li><a
+href="https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)">Deep
+Blue (chess computer) — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Watson_(computer)">Watson
+(computer) — Wikipedia</a></li>
+</ul>
+<p><em>As one of the longest eras in this document (two and a half
+decades, much longer than any of the others) there are naturally more
+cultural touchpoints here:</em></p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/The_Ultimate_Computer">The
+Ultimate Computer — Wikipedia</a>, a 1968 <em>Star Trek</em> episode
+(airing while Shakey/STRIPS research was underway) in which a shipboard
+computer follows its own logic to a lethal, unintended conclusion.</li>
+<li><a href="https://en.wikipedia.org/wiki/I,_Mudd">“I, Mudd” —
+Wikipedia</a>, a 1967 episode in the same season, is a second, lighter
+example (a crew defeats an android with a logical paradox).</li>
+<li><a href="https://en.wikipedia.org/wiki/HAL_9000">HAL 9000 —
+Wikipedia</a> — for readers curious about the era’s most famous cultural
+echo, the fictional shipboard computer from <em>2001: A Space
+Odyssey</em> (1968), released while Shakey and STRIPS research was
+underway. HAL’s menace comes from cold, premise-to-conclusion logical
+inference carried to a lethal conclusion, just like <em>Star Trek</em>’s
+<em>The Ultimate Computer</em>.</li>
+</ul>
+<p><strong>Go deeper</strong></p>
+<ul>
+<li>Richard Fikes and Nils Nilsson, “STRIPS: A New Approach to the
+Application of Theorem Proving to Problem Solving,” <em>Artificial
+Intelligence</em> 2, 1971. Free PDF: <a
+href="https://ai.stanford.edu/~nilsson/OnlinePubs-Nils/PublishedPapers/strips.pdf">Stanford</a>.</li>
+<li>John McCarthy and Patrick Hayes, “Some Philosophical Problems from
+the Standpoint of Artificial Intelligence,” <em>Machine
+Intelligence</em> 4, 1969. Free full text, hosted by the author: <a
+href="http://jmc.stanford.edu/articles/mcchay69.html">jmc.stanford.edu</a>.
+The paper that formally named the Frame Problem.</li>
+<li>Allen Newell and Herbert Simon, “Computer Science as Empirical
+Inquiry: Symbols and Search,” <em>Communications of the ACM</em> 19(3),
+1976 (Turing Award lecture). Free PDF: <a
+href="https://schiaffonati.faculty.polimi.it/TFI/newell_simon_1976.pdf">hosted
+copy</a>. Source of the Physical Symbol System Hypothesis.</li>
+<li>James Lighthill, “Artificial Intelligence: A General Survey,” 1973
+(the Lighthill Report). <a
+href="https://en.wikipedia.org/wiki/Lighthill_report">Wikipedia
+overview</a>; <a
+href="https://rodsmith.nz/wp-content/uploads/Lighthill_1973_Report.pdf">PDF
+mirror</a>.</li>
+<li><a
+href="https://www.sri.com/press/story/75-years-of-innovation-shakey-the-robot/">SRI
+International’s own retrospective on Shakey</a> — includes Bill Gates
+crediting Shakey as an early influence.</li>
+<li><a
+href="https://www.cs.ubc.ca/~poole/aibook/2e/html2e/ArtInt2e.Ch6.S1.SS2.html">UBC’s
+Artificial Intelligence textbook, STRIPS chapter</a> — a clear technical
+explanation of STRIPS representation, aimed at students.</li>
+</ul>
+<hr />
+<h2 id="behavior-based-robotics-19862002">Behavior-Based Robotics
+(1986–2002)</h2>
+<p>Rodney Brooks proposed something that sounded almost like a retreat:
+stop trying to build an internal model of the world at all. His claim,
+made in 1986, was that representation itself was “the wrong unit of
+abstraction” for real-time intelligent behavior — that a robot built
+from layers of simple, reactive behaviors, each directly wired from
+sensing to action, could produce useful intelligence without ever
+building a symbolic model of anything. “The world is its own best
+model,” as the slogan went. This approach produced real, shipped
+engineering: reactive control is the entire design philosophy behind the
+Roomba, iRobot’s household vacuum, released in 2002 — sixteen years
+after Brooks’ original claim. The Roomba is also, in a strange way, its
+own best illustration of the approach’s limits: its bump-and-try-again
+cleaning pattern is charming and effective, but it visibly isn’t
+<em>planning</em> anything. Critics like David Kirsh argued that some
+tasks — long-term planning, abstraction — genuinely need internal
+models, and the field mostly settled into hybrid architectures that
+combine both approaches. Separately, and much later, iRobot itself
+collapsed as a company — bankrupt by December 2025, sold to a Chinese
+manufacturer — though that outcome had far more to do with tariffs, a
+blocked Amazon acquisition, and competition than with any failure of the
+underlying idea.</p>
+<p><strong>Start here</strong></p>
+<ul>
+<li><a
+href="https://en.wikipedia.org/wiki/Subsumption_architecture">Subsumption
+architecture — Wikipedia</a> — overview of Brooks’ approach.</li>
+<li><a href="https://en.wikipedia.org/wiki/Rodney_Brooks">Rodney Brooks
+— Wikipedia</a> — biography and career.</li>
+<li><a href="https://en.wikipedia.org/wiki/Robot_vacuum">Robot vacuum —
+Wikipedia</a> — history of the category, including the Roomba’s 2002
+launch.</li>
+<li><a href="https://en.wikipedia.org/wiki/IRobot">iRobot —
+Wikipedia</a> — company history, including its 2025 bankruptcy and
+acquisition.</li>
+</ul>
+<p><strong>Go deeper</strong></p>
+<ul>
+<li>Rodney Brooks, “Intelligence Without Representation,” <em>Artificial
+Intelligence</em> 47, 1991. Free PDF, hosted by the author: <a
+href="https://people.csail.mit.edu/brooks/papers/representation.pdf">MIT
+CSAIL</a>. The canonical statement of the approach.</li>
+<li><a
+href="https://media.irobot.com/2002-09-18-iRobot-Introduces-Roomba-Intelligent-FloorVac-The-First-Automatic-Floor-Cleaner-In-The-U-S">iRobot’s
+original 2002 press release</a> announcing the Roomba.</li>
+<li>Progressive Policy Institute, <a
+href="https://www.progressivepolicy.org/the-demise-of-irobot-how-antitrust-enforcers-missed-the-elephant-in-the-room/">“The
+Demise of iRobot”</a> — an account of the company’s later business
+collapse and the antitrust context around the blocked Amazon
+acquisition.</li>
+</ul>
+<hr />
+<h2 id="multi-agent-systems-and-bdi-19871990s">Multi-Agent Systems and
+BDI (1987–1990s)</h2>
+<p>Around the same years Brooks was proposing to abandon internal
+models, a different group of researchers proposed keeping some structure
+— just not full “knowledge” of the world. Drawing on philosopher Michael
+Bratman’s 1987 account of practical reasoning, Anand Rao and Michael
+Georgeff formalized the Belief-Desire-Intention (BDI) model: an agent
+maintains beliefs (what it takes to be true), desires (what it wants),
+and intentions (what it’s currently committed to doing), and it doesn’t
+need to constantly re-examine every goal from scratch — it commits to
+intentions and only reconsiders them under the right conditions. This
+gave the field a genuine, lasting formal vocabulary for goal commitment,
+still present today as infrastructure in multi-agent software, game AI,
+and automated negotiation systems. But BDI itself, as a named research
+program, seems to have peaked: publication counts for the specific term
+rose steadily from the late 1980s, peaked around 2013–2017, and have
+been declining since — even as the broader term “multi-agent systems”
+kept climbing, propelled by an entirely different, much later wave of
+LLM-based agent research. BDI didn’t lose an argument. It got quietly
+absorbed, the same way feedback control was absorbed into control
+engineering decades earlier.</p>
+<p><strong>Start here</strong></p>
+<ul>
+<li><a
+href="https://en.wikipedia.org/wiki/Belief%E2%80%93desire%E2%80%93intention_software_model">Belief–desire–intention
+software model — Wikipedia</a> — a clear overview of the model and its
+known limitations.</li>
+<li><a
+href="https://en.wikipedia.org/wiki/Multiagent_systems">Multiagent
+system — Wikipedia</a> — general overview of the broader field BDI sits
+inside.</li>
+</ul>
+<p><strong>Go deeper</strong></p>
+<ul>
+<li>Anand S. Rao and Michael P. Georgeff, “BDI Agents: From Theory to
+Practice,” <em>Proceedings of the First International Conference on
+Multiagent Systems (ICMAS)</em>, 1995, pp. 312–319. Free PDF: <a
+href="https://cdn.aaai.org/ICMAS/1995/ICMAS95-042.pdf">AAAI</a>. The
+paper that gave the model its lasting name and practical grounding.</li>
+<li>Michael E. Bratman, <em>Intention, Plans, and Practical Reason</em>
+(Harvard University Press, 1987) — the philosophical source for the
+“intention” half of BDI.</li>
+</ul>
+<p><strong>A note on this document’s own research</strong>: the
+publication-count claim above (rise, peak around 2013–2017, decline
+since, contrasted with the still-climbing broader term “multi-agent
+systems”) comes from original research conducted for this project, not
+from an external source. See the appendix at the end of this document
+for the method and full data.</p>
+<hr />
+<h2 id="llm-agents-2022present">LLM Agents (2022–present)</h2>
+<p>The most recent chapter restates the same underlying claim in new
+vocabulary: “agentic AI” — models that can reason, call external tools,
+take multi-step actions, and pursue a goal with some independence,
+rather than simply answering a single prompt. The ReAct pattern,
+described in a 2022 paper, interleaves reasoning and action in a loop.
+By 2023, systems like AutoGPT and the broader adoption of
+function-calling made this kind of multi-step, tool-using behavior
+culturally visible for the first time to a general audience. The
+technique is genuinely useful — bounded, tool-assisted, multi-step
+execution works, often impressively, within a well-defined task and
+toolset. But the walk-back is already visible and is, in a real sense,
+the Frame Problem wearing new clothes: hallucination, brittle tool use,
+and weak long-horizon planning. Researcher Subbarao Kambhampati and
+colleagues have argued that large language models, by themselves, are
+not reliable planners or self-verifiers — they’re best understood as
+approximate knowledge sources that need external checking, not
+autonomous reasoners. In 2023, a New York lawyer submitted a legal brief
+containing fabricated case citations generated by ChatGPT; the citations
+didn’t exist, and the resulting court sanctions became one of the most
+widely circulated cautionary stories of the era.</p>
+<p><strong>Start here</strong></p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Large_language_model">Large
+language model — Wikipedia</a> — general background, for readers who
+want the underlying technology explained first.</li>
+<li><a href="https://en.wikipedia.org/wiki/AutoGPT">AutoGPT —
+Wikipedia</a> — overview of one of the first widely-known autonomous LLM
+agent tools.</li>
+<li><a href="https://en.wikipedia.org/wiki/Mata_v._Avianca,_Inc.">Mata
+v. Avianca, Inc. — Wikipedia</a> — full account of the
+hallucinated-citations legal case.</li>
+</ul>
+<p><strong>Go deeper</strong></p>
+<ul>
+<li>Shunyu Yao et al., “ReAct: Synergizing Reasoning and Acting in
+Language Models,” arXiv, 2022. <a
+href="https://arxiv.org/abs/2210.03629">Paper</a>; <a
+href="https://research.google/blog/react-synergizing-reasoning-and-acting-in-language-models/">Google
+Research blog explainer</a>.</li>
+<li>Subbarao Kambhampati et al., “LLMs Can’t Plan, But Can Help Planning
+in LLM-Modulo Frameworks,” arXiv, 2024. <a
+href="https://arxiv.org/abs/2402.01817">Paper</a>.</li>
+<li>Stevan Harnad, “The Symbol Grounding Problem,” <em>Physica D</em>
+42, 1990, pp. 335–346. Free PDF: <a
+href="https://www.cs.ox.ac.uk/activities/ieg/e-library/sources/harnad90_sgproblem.pdf">Oxford-hosted
+copy</a>. The classic statement of the deeper problem underneath modern
+hallucination: whether a system’s symbols connect to anything beyond
+other symbols.</li>
+</ul>
+<hr />
+<h2 id="closing-note-the-pattern-itself">Closing note: the pattern
+itself</h2>
+<p>Across all these AI eras, the same shape recurs: a confident claim of
+genuine autonomy, a real and lasting technique the pursuit actually
+produced, and a quiet walk-back from the original claim as its limits
+became clear. None of this is a case for cynicism about AI, now or in
+any earlier decade — it’s closer to the opposite. Every one of these
+“failures” left something durable behind. The oldest and simplest
+version of this same idea — a process that does exactly what it’s told
+and none of what’s meant — is even older than any of these eras: Goethe
+told a version of it in a 1797 poem, “Der Zauberlehrling” (“The
+Sorcerer’s Apprentice”), illustrated by artists more than a century
+before Disney’s famous 1940 adaptation.</p>
+<ul>
+<li><a
+href="https://en.wikipedia.org/wiki/The_Sorcerer%27s_Apprentice">Der
+Zauberlehrling / The Sorcerer’s Apprentice — Wikipedia</a> — the poem’s
+history and its adaptations.</li>
+<li><a href="https://hessen.museum-digital.de/object/1754">1838 etching
+by J.B. Sonderland — Frankfurter Goethe-Museum, via museum-digital</a> —
+a public-domain 19th-century illustration of the poem, predating
+Disney’s version by over a century. Free to view and reuse (Public
+Domain Mark).</li>
+</ul>
+<hr />
+<h2
+id="appendix-original-research-bdimulti-agent-systems-publication-trends">Appendix:
+Original Research — BDI/Multi-Agent Systems Publication Trends</h2>
+<p>The claim in the BDI section above (publication counts rising from
+the late 1980s, peaking 2013–2017, declining since) is based on original
+research conducted for this project, not on a pre-existing published
+source. It’s included here in full so readers can evaluate the method
+themselves.</p>
+<p><strong>Method:</strong> the Semantic Scholar Graph API’s bulk search
+endpoint was queried for papers matching the phrase “BDI agent belief
+desire intention,” in 5-year windows from 1988 through 2025. A second,
+related phrasing (“belief desire intention architecture”) was queried as
+a consistency check. A third, broader query (“multi-agent systems”) was
+run for comparison.</p>
+<p><strong>Results:</strong></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Years</th>
+<th>“BDI agent belief desire intention”</th>
+<th>“belief desire intention architecture”</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1988–1992</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr>
+<td>1993–1997</td>
+<td>21</td>
+<td>18</td>
+</tr>
+<tr>
+<td>1998–2002</td>
+<td>74</td>
+<td>58</td>
+</tr>
+<tr>
+<td>2003–2007</td>
+<td>209</td>
+<td>124</td>
+</tr>
+<tr>
+<td>2008–2012</td>
+<td>229</td>
+<td>125</td>
+</tr>
+<tr>
+<td>2013–2017</td>
+<td>266</td>
+<td>140</td>
+</tr>
+<tr>
+<td>2018–2022</td>
+<td>131</td>
+<td>82</td>
+</tr>
+<tr>
+<td>2023–2025</td>
+<td>75</td>
+<td>46</td>
+</tr>
+</tbody>
+</table>
+<p>The broader query “multi-agent systems” was <strong>not</strong>
+found to decline — it climbed monotonically over the same period (338
+papers in 1988–1992 to 22,879 in 2023–2025), almost certainly because
+the broad umbrella term absorbed a large and growing body of unrelated
+LLM-based multi-agent research beginning around 2023. This is presented
+as the likely explanation, not a proven causal claim.</p>
+<p><strong>Caveats, stated plainly:</strong> keyword-matching
+publication counts are an imperfect proxy for research activity. Some of
+the apparent decline in BDI-specific terminology may reflect researchers
+adopting newer terms for closely related ideas, rather than genuine
+decline in the underlying research area. The consistency of the shape
+across two different phrasings of the same underlying concept is some
+evidence the pattern is real rather than an artifact of one query’s
+exact wording, but this has not been checked against a more rigorous
+bibliometric database (e.g., Web of Science) and should be treated as a
+suggestive data point, not a definitive finding.</p>
+</body>
+</html>
